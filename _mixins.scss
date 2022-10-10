@@ -3,12 +3,14 @@ $tablet-width: 768px;
 $desktop-width: 1024px; 
 
 
-@mixin btn-outline($border) {
+@mixin btn-outline($border, $color) {
     border: #{$border};
+    color: #{$color};
 }
 
-@mixin btn($background) {
+@mixin btn($background, $color) {
     background: #{$background};
+    color: #{$color};
 }
 
 @mixin status($background, $color) {

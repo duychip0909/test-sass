@@ -28,7 +28,7 @@ body {
     width: 135px;
 }
 
-%card {
+.card {
     border-radius: 7px;
     box-shadow: 0px 4px 20px rgba(140, 140, 255, 0.05);
     background: rgb(255, 255, 255);
@@ -52,14 +52,12 @@ body {
 
 .btn-coming {
     @extend .button;
-    @include mixins.btn-outline(1px solid #58595B);
-    color: #58595B;
+    @include mixins.btn-outline(1px solid #58595B, #58595B);
 }
 
 .btn-sold {
     @extend .button;
-    @include mixins.btn(color.$gray-gradient-color);
-    color: #fff;
+    @include mixins.btn(color.$gray-gradient-color, #fff);
 }
 
 .btn-yellow {
@@ -106,7 +104,7 @@ body {
 }
 
 .card {
-    @extend %card;
+    @extend .card;
     .card-top {
         img {
             object-fit: cover;
