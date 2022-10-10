@@ -1,0 +1,152 @@
+.animate, .btn-divega {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+body {
+  width: 1390px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  background: #f4f4f4;
+}
+
+.button, .card .btn-yellow, .btn-yellow, .btn-sold, .btn-coming, .btn-divega {
+  border-radius: 5px;
+  font-weight: 600;
+  line-height: 19.5px;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 135px;
+}
+
+.card {
+  border-radius: 7px;
+  box-shadow: 0px 4px 20px rgba(140, 140, 255, 0.05);
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-divega {
+  background: linear-gradient(90deg, #0C1080 -8.92%, #4E52CD 105.87%);
+  background-size: 100% auto;
+  color: #fff;
+}
+.btn-divega:hover {
+  background: linear-gradient(270deg, #5B60EC 1.43%, #1519B0 100%);
+  background-position: right center;
+}
+
+.btn-coming {
+  border: 1px solid #58595B;
+  color: #58595B;
+}
+
+.btn-sold {
+  background: linear-gradient(90deg, #ACABAB 5.43%, #C1C1C1 91.52%);
+  color: #fff;
+}
+
+.btn-yellow {
+  background: linear-gradient(267.57deg, #FFCB6C 6.01%, #FFA400 95.58%);
+  color: #000;
+  width: initial !important;
+}
+
+.status, .status-sold, .status-coming, .status-timeleft {
+  border-radius: 5px;
+  margin: 0px 50px;
+  padding: 4px 37px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-timeleft {
+  border: 1px solid #e6e6e6;
+  color: #ED1651;
+  background: #fff;
+}
+
+.status-coming {
+  background: #e6e6e6;
+  color: #000;
+}
+
+.status-sold {
+  background: linear-gradient(267.57deg, #FFCB6C 6.01%, #FFA400 95.58%);
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card .card-top img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+}
+.card .card-bottom {
+  padding: 0px 10px 0px;
+  margin-top: -15px;
+  position: relative;
+  flex-grow: 1;
+}
+.card .card-bottom .product-name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.5px;
+  padding-top: 20px;
+}
+.card .card-bottom .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .card-bottom .wrapper .bid-start {
+  color: #2E3192;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+}
+.card .btn-yellow {
+  border-radius: 0px 0px 7px 7px;
+  font-weight: 400;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 24px;
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+  body .grid-container {
+    grid-template-columns: auto;
+    grid-gap: 24px;
+  }
+}
+
+/*# sourceMappingURL=app1.css.map */

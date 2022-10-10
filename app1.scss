@@ -1,0 +1,166 @@
+@use 'color';
+@use 'animate';
+@use 'mixins';
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+body {
+    width: 1390px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    background: #f4f4f4;
+}
+
+.button {
+    border-radius: 5px;
+    font-weight: 600;
+    line-height: 19.5px;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 135px;
+}
+
+%card {
+    border-radius: 7px;
+    box-shadow: 0px 4px 20px rgba(140, 140, 255, 0.05);
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-divega {
+    @extend .button;
+    @extend .animate;
+    background: color.$primary-gradient-color;
+    background-size: 100% auto;
+    color: #fff;
+    &:hover {
+        background: color.$primary-gradient-hover-color;
+        background-position: right center;
+    }
+}
+
+.btn-coming {
+    @extend .button;
+    @include mixins.btn-outline(1px solid #58595B);
+    color: #58595B;
+}
+
+.btn-sold {
+    @extend .button;
+    @include mixins.btn(color.$gray-gradient-color);
+    color: #fff;
+}
+
+.btn-yellow {
+    @extend .button;
+    background: linear-gradient(267.57deg, #FFCB6C 6.01%, #FFA400 95.58%);
+    color: #000;
+    width: initial!important;
+}
+
+
+.status {
+    border-radius: 5px;
+    margin: 0px 50px;
+    padding: 4px 37px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-timeleft {
+    @extend .status;
+    border: 1px solid #e6e6e6;
+    color: #ED1651;
+    background: #fff;
+}
+
+.status-coming {
+    @extend .status;
+    background: #e6e6e6;
+    color: #000;
+}
+
+.status-sold {
+    @extend .status;
+    @include mixins.status(color.$secondary-gradient-color, #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card {
+    @extend %card;
+    .card-top {
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-bottom: 1px solid #e6e6e6;
+        }
+    }
+    .card-bottom {
+        padding: 0px 10px 0px;
+        margin-top: -15px;
+        position: relative;
+        flex-grow: 1;
+        .product-name {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.5px;
+            padding-top: 20px;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .bid-start {
+                color: color.$primary-color;
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 26px;
+            }
+        }
+    }
+    .btn-yellow {
+        @extend .button;
+        border-radius: 0px 0px 7px 7px;
+        font-weight: 400;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 24px;
+}
+
+body {
+    @include mixins.mobile {
+        width: 100%;
+        .grid-container {
+            grid-template-columns: auto;
+            grid-gap: 24px;
+        }
+    }
+
+}
+
+
+

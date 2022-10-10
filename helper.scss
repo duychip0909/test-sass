@@ -1,0 +1,40 @@
+$p: 100;
+$px: 100;
+$py: 100;
+$m: 100;
+$fs: 100;
+$fw: 20;
+$step: 50;
+
+@for $i from 1 through $p {
+    .p-#{$i} {
+        padding: $i + px;
+    }
+} 
+@for $i from 1 through $px {
+    .px-#{$i} {
+        padding-left: $i + px;
+        padding-right: $i + px;
+    }
+} 
+@for $i from 1 through $py {
+    .py-#{$i} {
+        padding-top: $i + px;
+        padding-bottom: $i + px;
+    }
+} 
+@for $i from 1 through $m {
+    .m-#{$i} {
+        margin: $i + px;
+    }
+} 
+@for $i from 1 through $fs {
+    .fs-#{$i} {
+        font-size: $i + px;
+    }
+} 
+@for $i from 1 through $fw {
+    .fw-#{$i} {
+        font-weight: $i * $step;
+    }
+} 
